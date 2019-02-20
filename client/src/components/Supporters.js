@@ -62,8 +62,8 @@ function Supporters({ isDonating, activeDonations }) {
                 them to join the community.
               </Fragment>
             ) : (
-              `Join ${donationsLocale} supporters. Your $5 / month donation will help ` +
-              'keep tech education free and open.'
+              `Join ${donationsLocale} supporters. Your $5 / month` +
+              'donation will help keep tech education free and open.'
             )}
           </p>
         </b>
@@ -75,7 +75,7 @@ function Supporters({ isDonating, activeDonations }) {
             bsStyle='primary'
             href='https://donate.freecodecamp.org'
             target='_blank'
-            >
+          >
             Click here to become a Supporter
           </Button>
         </FullWidthRow>

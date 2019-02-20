@@ -58,7 +58,7 @@ class Header extends Component {
           {disableSettings ? null : <FCCSearch />}
           <ul id='top-right-nav'>
             <li>
-              <Link to='/learn'>Curriculum</Link>
+              <Link to='/learn'>Learn</Link>
             </li>
             <li>
               <a href='/forum' rel='noopener noreferrer' target='_blank'>
@@ -78,7 +78,7 @@ class Header extends Component {
             className='menu-button'
             onClick={this.toggleClass}
             ref={this.menuButtonRef}
-            >
+          >
             Menu
           </span>
           <Media onChange={this.handleMediaChange} query='(max-width: 734px)' />

@@ -70,7 +70,8 @@ const propTypes = {
   isSignedIn: PropTypes.bool,
   landingPage: PropTypes.bool,
   onlineStatusChange: PropTypes.func.isRequired,
-  removeFlashMessage: PropTypes.func.isRequired
+  removeFlashMessage: PropTypes.func.isRequired,
+  showFooter: PropTypes.bool
 };
 
 const mapStateToProps = createSelector(
@@ -138,6 +139,7 @@ class DefaultLayout extends Component {
       flashMessages = [],
       removeFlashMessage,
       landingPage,
+      showFooter = true,
       isOnline,
       isSignedIn
     } = this.props;
@@ -153,7 +155,7 @@ class DefaultLayout extends Component {
             },
             { name: 'keywords', content: metaKeywords.join(', ') }
           ]}
-          >
+        >
           <style>{fontawesome.dom.css()}</style>
         </Helmet>
         <Header disableSettings={disableSettings} />
@@ -164,7 +166,7 @@ class DefaultLayout extends Component {
           ) : null}
           {children}
         </div>
-        <Footer />
+        {showFooter && <Footer />}
       </Fragment>
     );
   }
